@@ -7,12 +7,12 @@ import StripeApplePay
 public class StripePlugin: CAPPlugin {
     private let paymentSheetExecutor = PaymentSheetExecutor()
     private let paymentFlowExecutor = PaymentFlowExecutor()
-    private let applePayExecutor = ApplePayExecutor()
+    //private let applePayExecutor = ApplePayExecutor()
 
     @objc func initialize(_ call: CAPPluginCall) {
         self.paymentSheetExecutor.plugin = self
         self.paymentFlowExecutor.plugin = self
-        self.applePayExecutor.plugin = self
+        //self.applePayExecutor.plugin = self
 
         let publishableKey = call.getString("publishableKey") ?? ""
 
@@ -37,7 +37,7 @@ public class StripePlugin: CAPPlugin {
     @objc func handleURLCallback(_ call: CAPPluginCall) {
         self.paymentSheetExecutor.plugin = self
         self.paymentFlowExecutor.plugin = self
-        self.applePayExecutor.plugin = self
+        //self.applePayExecutor.plugin = self
 
         let urlString = call.getString("url") ?? ""
 
@@ -78,7 +78,7 @@ public class StripePlugin: CAPPlugin {
         self.paymentFlowExecutor.confirmPaymentFlow(call)
     }
 
-    @objc func isApplePayAvailable(_ call: CAPPluginCall) {
+    /*@objc func isApplePayAvailable(_ call: CAPPluginCall) {
         self.applePayExecutor.isApplePayAvailable(call)
     }
 
@@ -88,7 +88,7 @@ public class StripePlugin: CAPPlugin {
 
     @objc func presentApplePay(_ call: CAPPluginCall) {
         self.applePayExecutor.presentApplePay(call)
-    }
+    }*/
 
     @objc func isGooglePayAvailable(_ call: CAPPluginCall) {
         call.unavailable("Not implemented on iOS.")

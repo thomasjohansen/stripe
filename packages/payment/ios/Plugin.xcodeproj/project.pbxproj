@@ -9,19 +9,18 @@
 /* Begin PBXBuildFile section */
 		03FC29A292ACC40490383A1F /* Pods_Plugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2A61DA5A1F2DD4F959604D /* Pods_Plugin.framework */; };
 		20C0B05DCFC8E3958A738AF2 /* Pods_PluginTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6753A823D3815DB436415E3 /* Pods_PluginTests.framework */; };
-		4FB4AFE429ADDA53003EBECD /* IdentityVerificationSheet in Resources */ = {isa = PBXBuildFile; fileRef = 4FB4AFE329ADDA53003EBECD /* IdentityVerificationSheet */; };
 		50ADFF92201F53D600D50D53 /* Plugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADFF88201F53D600D50D53 /* Plugin.framework */; };
 		50ADFF97201F53D600D50D53 /* StripePluginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADFF96201F53D600D50D53 /* StripePluginTests.swift */; };
 		50ADFF99201F53D600D50D53 /* StripePlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 50ADFF8B201F53D600D50D53 /* StripePlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50ADFFA42020D75100D50D53 /* Capacitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADFFA52020D75100D50D53 /* Capacitor.framework */; };
 		50ADFFA82020EE4F00D50D53 /* StripePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ADFFA72020EE4F00D50D53 /* StripePlugin.m */; };
 		50E1A94820377CB70090CE1A /* StripePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1A94720377CB70090CE1A /* StripePlugin.swift */; };
-		DB15233A2663D401003F8BF2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB1523352663D401003F8BF2 /* Info.plist */; };
+		BB76F3C62B99C3DD00B91D93 /* ApplePay in Sources */ = {isa = PBXBuildFile; fileRef = DB9491A526D9FC9600E48032 /* ApplePay */; };
+		BB76F3C72B99C3EF00B91D93 /* IdentityVerificationSheet in Sources */ = {isa = PBXBuildFile; fileRef = 4FB4AFE329ADDA53003EBECD /* IdentityVerificationSheet */; };
 		DB16470C269C457900E31818 /* PaymentSheetExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB16470B269C457900E31818 /* PaymentSheetExecutor.swift */; };
 		DB16470E269C468900E31818 /* PaymentSheetEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB16470D269C468900E31818 /* PaymentSheetEvents.swift */; };
 		DB280E4226AD433900AAEA30 /* PaymentFlowExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB280E4126AD433900AAEA30 /* PaymentFlowExecutor.swift */; };
 		DB280E4426AD476100AAEA30 /* PaymentFlowEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB280E4326AD476100AAEA30 /* PaymentFlowEvents.swift */; };
-		DB9491A626D9FC9600E48032 /* ApplePay in Resources */ = {isa = PBXBuildFile; fileRef = DB9491A526D9FC9600E48032 /* ApplePay */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,9 +184,9 @@
 			buildPhases = (
 				AB5B3E54B4E897F32C2279DA /* [CP] Check Pods Manifest.lock */,
 				50ADFF83201F53D600D50D53 /* Sources */,
+				50ADFF86201F53D600D50D53 /* Resources */,
 				50ADFF84201F53D600D50D53 /* Frameworks */,
 				50ADFF85201F53D600D50D53 /* Headers */,
-				50ADFF86201F53D600D50D53 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -264,9 +263,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB9491A626D9FC9600E48032 /* ApplePay in Resources */,
-				4FB4AFE429ADDA53003EBECD /* IdentityVerificationSheet in Resources */,
-				DB15233A2663D401003F8BF2 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,9 +304,7 @@
 				"${BUILT_PRODUCTS_DIR}/Capacitor/Capacitor.framework",
 				"${BUILT_PRODUCTS_DIR}/CapacitorCordova/Cordova.framework",
 				"${BUILT_PRODUCTS_DIR}/StripeApplePay/StripeApplePay.framework",
-				"${BUILT_PRODUCTS_DIR}/StripeCameraCore/StripeCameraCore.framework",
 				"${BUILT_PRODUCTS_DIR}/StripeCore/StripeCore.framework",
-				"${BUILT_PRODUCTS_DIR}/StripeIdentity/StripeIdentity.framework",
 				"${BUILT_PRODUCTS_DIR}/StripePaymentSheet/StripePaymentSheet.framework",
 				"${BUILT_PRODUCTS_DIR}/StripePayments/StripePayments.framework",
 				"${BUILT_PRODUCTS_DIR}/StripePaymentsUI/StripePaymentsUI.framework",
@@ -321,9 +315,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Capacitor.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cordova.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StripeApplePay.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StripeCameraCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StripeCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StripeIdentity.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StripePaymentSheet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StripePayments.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StripePaymentsUI.framework",
@@ -359,6 +351,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB76F3C72B99C3EF00B91D93 /* IdentityVerificationSheet in Sources */,
+				BB76F3C62B99C3DD00B91D93 /* ApplePay in Sources */,
 				DB280E4226AD433900AAEA30 /* PaymentFlowExecutor.swift in Sources */,
 				DB280E4426AD476100AAEA30 /* PaymentFlowEvents.swift in Sources */,
 				DB16470E269C468900E31818 /* PaymentSheetEvents.swift in Sources */,
