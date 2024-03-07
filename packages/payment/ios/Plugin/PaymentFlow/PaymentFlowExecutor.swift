@@ -27,6 +27,27 @@ class PaymentFlowExecutor: NSObject {
             return
         }
 
+        let items = call.getArray("paymentSummaryItems", [String: Any].self) ?? nil
+        if items == nil {
+            call.reject("Invalid Params. this method require paymentSummaryItems")
+            return
+        }
+
+        var paymentSummaryItems: [PKPaymentSummaryItem] = []
+        if let strs = items {
+            for item in strs {
+                let label = item["label"] as? String ?? ""
+                let amount = item["amount"] as? NSNumber
+                let amountD: NSDecimalNumber
+
+                amountD = NSDecimalNumber(decimal: amount!.decimalValue)
+
+                if (item["label"] != nil) && (item["amount"] != nil) {
+                    paymentSummaryItems.append(PKPaymentSummaryItem(label: label, amount: amountD))
+                }
+            }
+        }
+
         // MARK: Create a PaymentSheet instance
         var configuration = PaymentSheet.Configuration()
 
@@ -54,7 +75,8 @@ class PaymentFlowExecutor: NSObject {
         if call.getBool("enableApplePay", false) && applePayMerchantId != "" {
             configuration.applePay = .init(
                 merchantId: applePayMerchantId,
-                merchantCountryCode: call.getString("countryCode", "US")
+                merchantCountryCode: call.getString("countryCode", "US"),
+                paymentSummaryItems: paymentSummaryItems
             )
         }
 

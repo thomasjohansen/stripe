@@ -30,6 +30,14 @@ export interface CreatePaymentFlowOption extends BasePaymentOption {
    * Set paymentIntentClientSecret or setupIntentClientSecret
    */
   setupIntentClientSecret?: string;
+
+  /**
+   * Set PaymentSummaryItems for Apple Pay.
+   */
+  paymentSummaryItems: {
+    label: string;
+    amount: number;
+  }[];
 }
 
 /**
